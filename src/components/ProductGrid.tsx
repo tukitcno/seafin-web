@@ -1,68 +1,81 @@
 
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Star, ShoppingCart } from 'lucide-react';
+import { Star, ShoppingCart, Leaf } from 'lucide-react';
+import Fish3D from './Fish3D';
 
 const products = [
   {
     id: 1,
-    name: 'Atlantic Salmon',
-    category: 'Fresh Fish',
-    price: '₹899',
-    originalPrice: '₹1,199',
+    name: 'চিংড়ি শুটকি',
+    nameEn: 'Organic Dried Shrimp',
+    category: 'শুটকি মাছ',
+    price: '৳৪৯৯',
+    originalPrice: '৳৬৯৯',
     rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    badge: 'Fresh Today'
+    fishType: 'torus',
+    badge: 'জৈব',
+    color: '#0ea5e9'
   },
   {
     id: 2,
-    name: 'King Prawns',
-    category: 'Seafood',
-    price: '₹1,299',
-    originalPrice: '₹1,599',
+    name: 'রুই শুটকি',
+    nameEn: 'Organic Dried Rohu',
+    category: 'শুটকি মাছ',
+    price: '৳৮৯৯',
+    originalPrice: '৳১,১৯৯',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    badge: 'Premium'
+    fishType: 'octahedron',
+    badge: 'প্রিমিয়াম',
+    color: '#3b82f6'
   },
   {
     id: 3,
-    name: 'Dried Bombay Duck',
-    category: 'Dry Fish',
-    price: '₹649',
-    originalPrice: '₹799',
-    rating: 4.7,
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    badge: 'Best Seller'
+    name: 'ইলিশ শুটকি',
+    nameEn: 'Organic Dried Hilsa',
+    category: 'শুটকি মাছ',
+    price: '৳১,২৯৯',
+    originalPrice: '৳১,৫৯৯',
+    rating: 4.9,
+    fishType: 'star',
+    badge: 'বেস্ট সেলার',
+    color: '#1e40af'
   },
   {
     id: 4,
-    name: 'Red Snapper',
-    category: 'Fresh Fish',
-    price: '₹749',
-    originalPrice: '₹999',
-    rating: 4.9,
-    image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    badge: 'Ocean Fresh'
+    name: 'কাতলা শুটকি',
+    nameEn: 'Organic Dried Catla',
+    category: 'শুটকি মাছ',
+    price: '৳৭৪৯',
+    originalPrice: '৳৯৯৯',
+    rating: 4.7,
+    fishType: 'cylinder',
+    badge: 'প্রাকৃতিক',
+    color: '#0284c7'
   },
   {
     id: 5,
-    name: 'Dried Mackerel',
-    category: 'Dry Fish',
-    price: '₹549',
-    originalPrice: '₹699',
+    name: 'পার্শে শুটকি',
+    nameEn: 'Organic Dried Parse',
+    category: 'শুটকি মাছ',
+    price: '৳৫৪৯',
+    originalPrice: '৳৬৯৯',
     rating: 4.6,
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    badge: 'Traditional'
+    fishType: 'torus',
+    badge: 'ঐতিহ্যবাহী',
+    color: '#0ea5e9'
   },
   {
     id: 6,
-    name: 'Tuna Steaks',
-    category: 'Fresh Fish',
-    price: '₹1,199',
-    originalPrice: '₹1,499',
+    name: 'করাল শুটকি',
+    nameEn: 'Organic Dried Coral',
+    category: 'শুটকি মাছ',
+    price: '৳৯৯৯',
+    originalPrice: '৳১,২৯৯',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-    badge: 'Premium Cut'
+    fishType: 'octahedron',
+    badge: 'স্পেশাল',
+    color: '#3b82f6'
   }
 ];
 
@@ -73,14 +86,14 @@ const ProductGrid = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-            Our Premium{' '}
+            আমাদের{' '}
             <span className="bg-gradient-to-r from-ocean-600 to-ocean-800 bg-clip-text text-transparent">
-              Collection
+              প্রিমিয়াম সংগ্রহ
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our carefully curated selection of the finest sea fish and traditional dry fish, 
-            sourced directly from coastal waters and prepared with traditional methods.
+            বাংলাদেশের উপকূলীয় অঞ্চল থেকে সংগৃহীত রাসায়নিক মুক্ত, ১০০% প্রাকৃতিক 
+            শুটকি মাছের বিশেষ সংগ্রহ। স্বাস্থ্যকর প্রোটিনের জন্য আদর্শ।
           </p>
         </div>
 
@@ -88,16 +101,16 @@ const ProductGrid = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <Card key={product.id} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="relative overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              <div className="relative overflow-hidden h-64">
+                <Fish3D 
+                  type={product.fishType as any}
+                  color={product.color}
+                  scale={1}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {/* Badge */}
-                <div className="absolute top-4 left-4 bg-ocean-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">
+                  <Leaf className="h-3 w-3 mr-1" />
                   {product.badge}
                 </div>
                 
@@ -111,17 +124,18 @@ const ProductGrid = () => {
               
               <div className="p-6">
                 <div className="mb-2">
-                  <span className="text-sm text-ocean-600 font-medium">{product.category}</span>
+                  <span className="text-sm text-green-600 font-medium">{product.category}</span>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.name}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-1">{product.name}</h3>
+                <p className="text-sm text-gray-600 mb-3">{product.nameEn}</p>
                 
                 <div className="flex items-center mb-4">
                   <div className="flex items-center">
                     <Star className="h-4 w-4 text-yellow-400 fill-current" />
                     <span className="text-sm text-gray-600 ml-1">{product.rating}</span>
                   </div>
-                  <span className="text-sm text-gray-400 ml-2">(250+ reviews)</span>
+                  <span className="text-sm text-gray-400 ml-2">(২৫০+ রিভিউ)</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
@@ -131,7 +145,7 @@ const ProductGrid = () => {
                   </div>
                   
                   <Button className="bg-gradient-to-r from-ocean-600 to-ocean-700 hover:from-ocean-700 hover:to-ocean-800 text-white">
-                    Add to Cart
+                    কার্টে যোগ করুন
                   </Button>
                 </div>
               </div>
@@ -142,7 +156,7 @@ const ProductGrid = () => {
         {/* View All Button */}
         <div className="text-center mt-12">
           <Button variant="outline" size="lg" className="border-ocean-300 text-ocean-700 hover:bg-ocean-50 font-semibold px-8 py-4 rounded-xl">
-            View All Products
+            সব পণ্য দেখুন
           </Button>
         </div>
       </div>
