@@ -37,8 +37,8 @@ const Hero = () => {
 
             {/* Fish Images Display */}
             <div className="relative mb-8 flex items-center justify-center lg:justify-start h-[300px]">
-              {/* Fish Images - Centered, 1mm gap, no water wave */}
-              <div className="flex items-center justify-center gap-[1mm]">
+              {/* Fish Images - Responsive: side by side on large, stacked on mobile, with animation */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-[1mm]">
                 <img
                   src="/lovable-uploads/5646843e-635d-4778-93ba-dc4ac9caf098.png"
                   alt="Bronze Fish Background"
