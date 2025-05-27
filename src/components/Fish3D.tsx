@@ -22,7 +22,6 @@ const FishShape = ({ type, color = '#3b82f6', position = [0, 0, 0], scale = 1, a
       meshRef.current.rotation.y += 0.01;
       
       if (hovered) {
-        meshRef.current.rotation.speed = 0.02;
         meshRef.current.scale.setScalar(scale * 1.2);
       } else {
         meshRef.current.scale.setScalar(scale);
