@@ -42,14 +42,14 @@ const Hero = () => {
                 <img
                   src="/lovable-uploads/5646843e-635d-4778-93ba-dc4ac9caf098.png"
                   alt="Bronze Fish Background"
-                  className="w-60 h-60 object-contain opacity-70 transition-transform duration-500"
-                  style={{ margin: 0 }}
+                  className="w-60 h-60 object-contain opacity-70 animate-float transition-transform duration-500"
+                  style={{ margin: 0, animationDelay: '0.5s' }}
                 />
                 <img
                   src="/lovable-uploads/da989531-6df3-4866-a39b-9ea212775891.png"
                   alt="Fresh Organic Sea Fish"
-                  className="w-60 h-60 object-contain transition-transform duration-500"
-                  style={{ margin: 0 }}
+                  className="w-60 h-60 object-contain animate-float transition-transform duration-500"
+                  style={{ margin: 0, animationDelay: '1s' }}
                 />
               </div>
               
@@ -57,7 +57,7 @@ const Hero = () => {
               <div className="absolute -top-4 -left-4 bg-white p-4 rounded-xl shadow-lg animate-float z-30">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-sm font-medium">আজ তাজা</span>
+                  <span className="text-sm font-medium">আজকের তাজা</span>
                 </div>
               </div>
               

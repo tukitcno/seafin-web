@@ -4,25 +4,25 @@ import { Card } from '@/components/ui/card';
 
 const testimonials = [
   {
-    name: 'Priya Sharma',
-    location: 'Mumbai',
+    name: 'Abdullah Rahman',
+    location: 'Dhaka',
     rating: 5,
-    text: 'The freshness of the fish is incredible! I\'ve been ordering from Seafin for 6 months now and they never disappoint. The delivery is always on time and the quality is consistently excellent.',
-    avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b647?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
+    text: 'মাছের টাটকা স্বাদ অসাধারণ! ছয় মাস ধরে অর্ডার করছি, কখনোই হতাশ হইনি। ডেলিভারি সময়মতো এবং মান সবসময়ই চমৎকার।',
+    avatar: 'https://randomuser.me/api/portraits/men/75.jpg'
   },
   {
-    name: 'Rajesh Kumar',
-    location: 'Delhi',
+    name: 'Hasan Ahmed',
+    location: 'Sylhet',
     rating: 5,
-    text: 'As a chef, I need the best quality seafood for my restaurant. Seafin.shop has become my go-to supplier. Their dry fish collection is particularly outstanding - authentic taste and perfect preparation.',
-    avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
+    text: 'রেস্টুরেন্টের জন্য সেরা মানের সামুদ্রিক মাছ দরকার ছিল। Seafin.shop এখন আমার নির্ভরযোগ্য সাপ্লায়ার। শুটকি কালেকশন একেবারে আসল স্বাদের!',
+    avatar: 'https://randomuser.me/api/portraits/men/76.jpg'
   },
   {
-    name: 'Meera Nair',
-    location: 'Kochi',
+    name: 'Fatema Akter',
+    location: 'Mymensingh',
     rating: 5,
-    text: 'Being from Kerala, I\'m quite particular about fish quality. Seafin.shop exceeds my expectations every time. The variety is amazing and everything arrives perfectly fresh.',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80'
+    text: 'আমি মাছের মান নিয়ে খুবই সচেতন। Seafin.shop প্রত্যেকবারই আমার প্রত্যাশা ছাড়িয়ে যায়। বৈচিত্র্য দারুণ এবং সবকিছু একদম টাটকা আসে।',
+    avatar: 'https://randomuser.me/api/portraits/women/65.jpg'
   }
 ];
 
