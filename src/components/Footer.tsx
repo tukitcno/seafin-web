@@ -44,20 +44,21 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3">
-              <div className="flex items-center">
-                <Phone className="h-5 w-5 text-ocean-400 mr-3" />
-                <span className="text-gray-300">+91 98765 43210</span>
+              <div className="mb-2">
+                <span className="block font-bold text-ocean-400">Write Us</span>
+                <span className="block text-gray-300 text-sm">SALE OFFICE</span>
+                <span className="block text-gray-300">ceo@tynioltd.com</span>
               </div>
-              <div className="flex items-center">
-                <Mail className="h-5 w-5 text-ocean-400 mr-3" />
-                <span className="text-gray-300">hello@seafin.shop</span>
+              <div className="mb-2">
+                <span className="block font-bold text-ocean-400">SUPPORT</span>
+                <span className="block text-gray-300">info@tynioltd.com</span>
               </div>
-              <div className="flex items-start">
-                <MapPin className="h-5 w-5 text-ocean-400 mr-3 mt-1" />
-                <span className="text-gray-300">
-                  123 Coastal Avenue<br />
-                  Mumbai, Maharashtra 400001
-                </span>
+              <div className="mb-2">
+                <span className="block font-bold text-ocean-400">Call Us</span>
+                <span className="block text-gray-300 text-sm">HEAD OFFICE (Cox's Bazaar)</span>
+                <span className="block text-gray-300">+880 1635-890477</span>
+                <span className="block text-gray-300 text-sm mt-1">BRANCH (Dhaka)</span>
+                <span className="block text-gray-300">+880 19200-97225</span>
               </div>
             </div>
           </div>
