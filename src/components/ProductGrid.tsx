@@ -2,7 +2,6 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Star, ShoppingCart, Leaf } from 'lucide-react';
-import Fish3D from './Fish3D';
 
 const products = [
   {
@@ -13,9 +12,7 @@ const products = [
     price: '৳৪৯৯',
     originalPrice: '৳৬৯৯',
     rating: 4.9,
-    fishType: 'torus',
     badge: 'জৈব',
-    color: '#0ea5e9'
   },
   {
     id: 2,
@@ -25,9 +22,7 @@ const products = [
     price: '৳৮৯৯',
     originalPrice: '৳১,১৯৯',
     rating: 4.8,
-    fishType: 'octahedron',
     badge: 'প্রিমিয়াম',
-    color: '#3b82f6'
   },
   {
     id: 3,
@@ -37,9 +32,7 @@ const products = [
     price: '৳১,২৯৯',
     originalPrice: '৳১,৫৯৯',
     rating: 4.9,
-    fishType: 'star',
     badge: 'বেস্ট সেলার',
-    color: '#1e40af'
   },
   {
     id: 4,
@@ -49,9 +42,7 @@ const products = [
     price: '৳৭৪৯',
     originalPrice: '৳৯৯৯',
     rating: 4.7,
-    fishType: 'cylinder',
     badge: 'প্রাকৃতিক',
-    color: '#0284c7'
   },
   {
     id: 5,
@@ -61,9 +52,7 @@ const products = [
     price: '৳৫৪৯',
     originalPrice: '৳৬৯৯',
     rating: 4.6,
-    fishType: 'torus',
     badge: 'ঐতিহ্যবাহী',
-    color: '#0ea5e9'
   },
   {
     id: 6,
@@ -73,9 +62,7 @@ const products = [
     price: '৳৯৯৯',
     originalPrice: '৳১,২৯৯',
     rating: 4.8,
-    fishType: 'octahedron',
     badge: 'স্পেশাল',
-    color: '#3b82f6'
   }
 ];
 
@@ -101,12 +88,14 @@ const ProductGrid = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <Card key={product.id} className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="relative overflow-hidden h-64">
-                <Fish3D 
-                  type={product.fishType as any}
-                  color={product.color}
-                  scale={1}
-                />
+              <div className="relative overflow-hidden h-64 bg-gradient-to-br from-ocean-50 to-ocean-100 flex items-center justify-center">
+                {/* Placeholder for product image */}
+                <div className="text-center text-gray-400">
+                  <div className="w-20 h-20 mx-auto mb-4 bg-ocean-200 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">🐟</span>
+                  </div>
+                  <p className="text-sm">পণ্যের ছবি যোগ করা হবে</p>
+                </div>
                 
                 {/* Badge */}
                 <div className="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center">

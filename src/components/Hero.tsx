@@ -1,7 +1,6 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Leaf, Shield } from 'lucide-react';
-import Fish3D from './Fish3D';
 
 const Hero = () => {
   return (
@@ -80,36 +79,18 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* 3D Fish Display */}
+          {/* Fish Image Display */}
           <div className="relative animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <div className="grid grid-cols-2 gap-6 h-[500px]">
-              <div className="h-full">
-                <Fish3D 
-                  type="octahedron" 
-                  color="#0ea5e9" 
-                  scale={1.2}
+            <div className="flex items-center justify-center h-[500px]">
+              <div className="relative w-80 h-80 group">
+                <img 
+                  src="/lovable-uploads/da989531-6df3-4866-a39b-9ea212775891.png"
+                  alt="Fresh Organic Sea Fish"
+                  className="w-full h-full object-contain animate-float group-hover:scale-110 transition-transform duration-500"
                 />
-              </div>
-              <div className="h-full">
-                <Fish3D 
-                  type="torus" 
-                  color="#3b82f6" 
-                  scale={0.8}
-                />
-              </div>
-              <div className="h-full">
-                <Fish3D 
-                  type="cylinder" 
-                  color="#1e40af" 
-                  scale={1}
-                />
-              </div>
-              <div className="h-full">
-                <Fish3D 
-                  type="star" 
-                  color="#0284c7" 
-                  scale={0.9}
-                />
+                
+                {/* Animated glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-ocean-400/20 to-blue-400/20 rounded-full blur-2xl animate-pulse"></div>
               </div>
             </div>
             
