@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Star, Leaf, Shield } from 'lucide-react';
 
@@ -35,6 +34,55 @@ const Hero = () => {
               প্রাকৃতিক শুটকি মাছ ও তাজা সামুদ্রিক মাছ। স্বাস্থ্যকর প্রোটিনের জন্য 
               আমাদের বিশ্বস্ত পছন্দ।
             </p>
+
+            {/* Fish Images Display */}
+            <div className="relative mb-8 flex items-center justify-center lg:justify-start h-[300px]">
+              {/* Background Fish - Bronze colored fish positioned behind */}
+              <div className="absolute z-0 w-64 h-64 animate-float" style={{ animationDelay: '0.5s' }}>
+                <img 
+                  src="/lovable-uploads/533e71e0-8150-4de1-8072-4c4b5e8c3353.png"
+                  alt="Bronze Fish Background"
+                  className="w-full h-full object-contain opacity-70 group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              
+              {/* Foreground Fish - Original fish positioned in front */}
+              <div className="relative z-10 w-60 h-60 group">
+                <img 
+                  src="/lovable-uploads/da989531-6df3-4866-a39b-9ea212775891.png"
+                  alt="Fresh Organic Sea Fish"
+                  className="w-full h-full object-contain animate-float group-hover:scale-110 transition-transform duration-500"
+                />
+                
+                {/* Animated glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-ocean-400/20 to-blue-400/20 rounded-full blur-2xl animate-pulse"></div>
+              </div>
+
+              {/* Water Wave Lines */}
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20">
+                <img 
+                  src="/lovable-uploads/8e590cbb-793f-45eb-a985-f6a536e28050.png"
+                  alt="Water Waves"
+                  className="w-80 h-20 object-contain animate-float opacity-80"
+                  style={{ animationDelay: '1s' }}
+                />
+              </div>
+              
+              {/* Floating Info Cards */}
+              <div className="absolute -top-4 -left-4 bg-white p-4 rounded-xl shadow-lg animate-float z-30">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <span className="text-sm font-medium">আজ তাজা</span>
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg animate-float z-30" style={{ animationDelay: '1.5s' }}>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-ocean-600">৪.৯★</div>
+                  <div className="text-xs text-gray-600">গ্রাহক রেটিং</div>
+                </div>
+              </div>
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <Button size="lg" className="bg-gradient-to-r from-ocean-600 to-ocean-700 hover:from-ocean-700 hover:to-ocean-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
@@ -47,7 +95,7 @@ const Hero = () => {
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 text-sm mb-8">
               <div className="flex items-center space-x-2">
                 <Shield className="h-4 w-4 text-green-600" />
                 <span>রাসায়নিক মুক্ত</span>
@@ -63,7 +111,7 @@ const Hero = () => {
             </div>
             
             {/* Stats */}
-            <div className="flex items-center justify-center lg:justify-start space-x-8 mt-12">
+            <div className="flex items-center justify-center lg:justify-start space-x-8">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">৫০+</div>
                 <div className="text-sm text-gray-600">মাছের জাত</div>
@@ -79,36 +127,8 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Fish Image Display */}
-          <div className="relative animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center justify-center h-[500px]">
-              <div className="relative w-80 h-80 group">
-                <img 
-                  src="/lovable-uploads/da989531-6df3-4866-a39b-9ea212775891.png"
-                  alt="Fresh Organic Sea Fish"
-                  className="w-full h-full object-contain animate-float group-hover:scale-110 transition-transform duration-500"
-                />
-                
-                {/* Animated glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-ocean-400/20 to-blue-400/20 rounded-full blur-2xl animate-pulse"></div>
-              </div>
-            </div>
-            
-            {/* Floating Info Cards */}
-            <div className="absolute -top-4 -left-4 bg-white p-4 rounded-xl shadow-lg animate-float">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-sm font-medium">আজ তাজা</span>
-              </div>
-            </div>
-            
-            <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg animate-float" style={{ animationDelay: '1s' }}>
-              <div className="text-center">
-                <div className="text-lg font-bold text-ocean-600">৪.৯★</div>
-                <div className="text-xs text-gray-600">গ্রাহক রেটিং</div>
-              </div>
-            </div>
-          </div>
+          {/* Right side - keeping it empty since we moved images to left */}
+          <div className="hidden lg:block"></div>
         </div>
       </div>
     </section>
