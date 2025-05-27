@@ -37,17 +37,17 @@ const Hero = () => {
 
             {/* Fish Images Display */}
             <div className="relative mb-8 flex items-center justify-center lg:justify-start h-[300px]">
-              {/* Background Fish - Bronze colored fish positioned behind */}
-              <div className="absolute z-0 w-64 h-64 animate-float" style={{ animationDelay: '0.5s' }}>
+              {/* Background Fish - Positioned side by side on the left */}
+              <div className="absolute left-0 z-0 w-60 h-60 animate-float" style={{ animationDelay: '0.5s' }}>
                 <img 
-                  src="/lovable-uploads/533e71e0-8150-4de1-8072-4c4b5e8c3353.png"
+                  src="/lovable-uploads/5646843e-635d-4778-93ba-dc4ac9caf098.png"
                   alt="Bronze Fish Background"
                   className="w-full h-full object-contain opacity-70 group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               
-              {/* Foreground Fish - Original fish positioned in front */}
-              <div className="relative z-10 w-60 h-60 group">
+              {/* Foreground Fish - Positioned side by side on the right */}
+              <div className="relative left-24 z-10 w-60 h-60 group">
                 <img 
                   src="/lovable-uploads/da989531-6df3-4866-a39b-9ea212775891.png"
                   alt="Fresh Organic Sea Fish"
@@ -58,12 +58,12 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-ocean-400/20 to-blue-400/20 rounded-full blur-2xl animate-pulse"></div>
               </div>
 
-              {/* Water Wave Lines */}
+              {/* Water Wave Lines - Made longer than fish pictures */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20">
                 <img 
-                  src="/lovable-uploads/8e590cbb-793f-45eb-a985-f6a536e28050.png"
+                  src="/lovable-uploads/2d289f8b-9806-4051-a2f0-55109eeeaf2e.png"
                   alt="Water Waves"
-                  className="w-80 h-20 object-contain animate-float opacity-80"
+                  className="w-96 h-24 object-contain animate-float opacity-80"
                   style={{ animationDelay: '1s' }}
                 />
               </div>
