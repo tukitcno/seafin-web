@@ -36,9 +36,10 @@ const Hero = () => {
             </p>
 
             {/* Fish Images Display */}
-            <div className="relative mb-8 flex items-center justify-center lg:justify-start h-[300px]">
-              {/* Fish Images - Responsive: side by side on large, stacked on mobile, with animation */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-[1mm]">
+            {/* Desktop: Fish images on right, mobile: unchanged (stacked) */}
+            <div className="relative mb-8 h-[300px]">
+              {/* Desktop right-aligned fish images */}
+              <div className="hidden lg:flex flex-col items-end justify-center absolute right-0 top-1/2 -translate-y-1/2 gap-[1mm]">
                 <img
                   src="/lovable-uploads/5646843e-635d-4778-93ba-dc4ac9caf098.png"
                   alt="Bronze Fish Background"
@@ -51,6 +52,36 @@ const Hero = () => {
                   className="w-60 h-60 object-contain animate-float transition-transform duration-500"
                   style={{ margin: 0, animationDelay: '1s' }}
                 />
+              </div>
+              {/* Mobile: stacked fish images as before */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-[1mm] lg:hidden">
+                <img
+                  src="/lovable-uploads/5646843e-635d-4778-93ba-dc4ac9caf098.png"
+                  alt="Bronze Fish Background"
+                  className="w-60 h-60 object-contain opacity-70 animate-float transition-transform duration-500"
+                  style={{ margin: 0, animationDelay: '0.5s' }}
+                />
+                <img
+                  src="/lovable-uploads/da989531-6df3-4866-a39b-9ea212775891.png"
+                  alt="Fresh Organic Sea Fish"
+                  className="w-60 h-60 object-contain animate-float transition-transform duration-500"
+                  style={{ margin: 0, animationDelay: '1s' }}
+                />
+              </div>
+              {/* Desktop: Extra info cards on left, hidden on mobile */}
+              <div className="hidden lg:flex flex-col gap-6 absolute left-0 top-1/2 -translate-y-1/2">
+                <div className="bg-white p-4 rounded-xl shadow-lg animate-float z-30 flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <span className="text-sm font-medium">আজকের তাজা</span>
+                </div>
+                <div className="bg-white p-4 rounded-xl shadow-lg animate-float z-30 flex items-center space-x-2" style={{ animationDelay: '0.5s' }}>
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <span className="text-sm font-medium">Fresh-Quality</span>
+                </div>
+                <div className="bg-white p-4 rounded-xl shadow-lg animate-float z-30 flex items-center space-x-2" style={{ animationDelay: '1s' }}>
+                  <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                  <span className="text-sm font-medium">Imported Sea Fish & Dry Fishes</span>
+                </div>
               </div>
               
               {/* Floating Info Cards */}
